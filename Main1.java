@@ -6,9 +6,9 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 
 public class Main1 {
-    static BlockingQueue q = new ArrayBlockingQueue(30);
+    static BlockingQueue q = new ArrayBlockingQueue(40);
 
-    static int n = 15;
+    static int n = 30;
     public static void main(String[] args) throws InterruptedException {
 
 
@@ -88,7 +88,7 @@ public class Main1 {
 //        }
     }
 
-    public static void number() throws InterruptedException {
+    public synchronized static void number() throws InterruptedException {
         for (int i = 1; i <= n; i++) {
 
             if (i % 3 == 0 && i % 5 == 0) {
