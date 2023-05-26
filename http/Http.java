@@ -46,5 +46,10 @@ public class Http {
 //        final User task3 = HttpSend.senPost(URI.create(CREATE_USER), user);
 //        HttpSend.senGetListUser(URI.create(CREATE_USER));
 //        System.out.println(task3);
+
+        List<UserForTaskTwo> utf = HttpSend.allCommentsById(3);
+        System.out.println(utf.get(0));
+        System.out.println(HttpSend.allCommentsById(3).size());
+
     }
 }
